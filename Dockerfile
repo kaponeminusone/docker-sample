@@ -13,6 +13,7 @@ COPY . .
 RUN bin/bash -c "source .venv/bin/activate"
 RUN pip install -r requirements.txt
 
+ENV PORT=8000
 # Exponer el puerto de FastAPI
 EXPOSE 8000
 
