@@ -1,9 +1,12 @@
 
-from fastapi import FastAPI, UploadFile, HTTPException, BackgroundTasks
-from fastapi.responses import FileResponse
 import os
 import subprocess
-import shutil
+from fastapi import FastAPI, UploadFile, HTTPException, BackgroundTasks
+from fastapi.responses import FileResponse
+from dotenv import load_dotenv  # Importa dotenv para cargar .env
+
+# Carga las variables de entorno desde el archivo .env
+load_dotenv()
 
 app = FastAPI()
 
